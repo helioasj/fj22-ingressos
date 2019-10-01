@@ -10,6 +10,13 @@ public class Ingresso {
 		private Sessao sessao;
 		private BigDecimal preco;
 		
+
+		/**
+	     * @deprecated hibernate only
+	     */
+		public Ingresso() {
+			
+		}
 		public Ingresso(Sessao sessao, Desconto tipoDesconto) {
 			this.sessao = sessao;
 			this.preco = tipoDesconto.aplicarDescontoSobre(sessao.getPreco());
